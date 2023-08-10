@@ -89,7 +89,7 @@ for (predator in predators){
 }
 
 #save RDS for later use in case of crash
-saveRDS(output_allsites, 'preypredatorcombnoutput_allsites_Ttfix_clean.rds')
+saveRDS(output_allsites, 'output_allsites.rds')
 #output_allsites <- readRDS('preypredatorcombnoutput_allsites_Ttfix_clean.rds')
 
 
