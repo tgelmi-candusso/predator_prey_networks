@@ -26,7 +26,7 @@ nope <- c("squirrel (hunting)",
           "anthropogenic")
 
 #load data
-pred_aa <- read.csv("predation_events_pub.csv") 
+pred_aa <- read.csv("data/predation_events_pub.csv") 
 
 #summarize observations of preyed items per predator
 summ<- pred_aa %>% group_by(prey, predator) %>% dplyr::count()
@@ -37,7 +37,7 @@ fc$n.y[is.na(fc$n.y)] <- 0
 fc<-fc %>% select(prey, n.x, n.y)
 colnames(fc)<- c('prey', 'fox', 'coyote')
 
-#write.csv(fc, "observed_predation_events_table_summary.csv")
+#write.csv(fc, "data/observed_predation_events_table_summary.csv")
 
 ## bar graph with predation events observed (Figure 2a)
 pred <- pred_aa
@@ -63,7 +63,7 @@ pred2 <- pred %>% select(predator, prey, site_name)
 pred2$site<- "site_s"
 colnames(pred2)<- c("predator","prey", "site_name", "site_s")
 pred2$predator <- factor(pred2$predator, levels = c('fox', 'coyote'), labels=c('fox (Obs)', 'coyotes (Obs)'))
-#write.csv(pred2, "OBS_interactions.csv", row.names=FALSE)
+#write.csv(pred2, "data/OBS_interactions.csv", row.names=FALSE)
 
 ##generate bipartite network
 web4<- frame2webs(pred2[,c(1:2,4)], varnames = c("prey", "predator", "site_s"), type.out = "list", emptylist = TRUE)

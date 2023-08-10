@@ -20,7 +20,7 @@ library(tidyverse)
 #the demo data consists of one site in Toronto, on a vacant lot next to a ravine, where
 #the camera trap ran for 364 continuous days.
 
-data <-  read.csv("demo_data.csv")
+data <-  read.csv("data/demo_data.csv")
 
 #set date + species name format
 data$DateTime <- as.POSIXlt(data$DateTime, format="%Y-%m-%d %H:%M:%S") 

@@ -14,7 +14,7 @@ library(lubridate)
 library(dplyr)
 
 #load data
-data <-  read.csv("demo_data.csv")
+data <-  read.csv("data/demo_data.csv")
 
 #set datetime in the right format
 as.POSIXlt(data$DateTime, format="%Y-%m-%d %H:%M:%S") -> data$DateTime
@@ -85,6 +85,6 @@ summ_table <- left_join(site_time, dataset, by="site_name")
 summ_table2 <- left_join(site_time, dataset2, by="site_name")
 
 #save summary tables
-write.csv(summ_table, "summary_table_days_xy.csv")
-write.csv(summ_table2, "summary_table_detections_xy.csv")
+write.csv(summ_table, "data/summary_table_days_xy.csv")
+write.csv(summ_table2, "data/summary_table_detections_xy.csv")
 

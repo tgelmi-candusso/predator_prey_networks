@@ -18,8 +18,8 @@ library(bipartiteD3)
 ## follows with objects obtained in script 4 and script 3
 # or
 #load objects
-out_pp2 <- read.csv("PEE_interactions.csv")
-pred2 <- read.csv("OBS_interactions.csv")
+out_pp2 <- read.csv("data/PEE_interactions.csv")
+pred2 <- read.csv("data/OBS_interactions.csv")
 
 #### Predation events vs potential encounters networks ####
 #plot both in one bipartite network to compare predator-prey interactions observed with two different datasets

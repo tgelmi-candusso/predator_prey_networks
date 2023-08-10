@@ -1,5 +1,5 @@
 # predator_prey_networks
-# Publication: Gelmi-Candusso, et al. (2023) Building urban predator-prey networks using camera traps. Food webs.
+# Publication: Gelmi-Candusso et al. (2023) Building urban predator-prey networks using camera traps. Food Webs.
 
 repository for data and code for:
   ** 1. estimating waiting times between detections

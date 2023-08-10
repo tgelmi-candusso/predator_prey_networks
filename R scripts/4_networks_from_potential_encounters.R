@@ -20,7 +20,7 @@ library(ggplot2)
 library(bipartiteD3)
 
 #load data from publication
-output_allsites <- read.csv("output_allsites_pub.csv")
+output_allsites <- read.csv("data/output_allsites_pub.csv")
 
 
 #Species 1 is the firest species detected, and Species 2 is the following species detected
@@ -213,7 +213,7 @@ out_pp2 <- out_pp2 %>% select(predator, prey, bird_feeder)
 out_pp2$site<- "site_s"
 colnames(out_pp2)<- c("predator","prey", "bird_feeder", "site_s")
 out_pp2$predator <- factor(out_pp2$predator, labels = c('fox (PEE)', 'coyote (PEE)'))
-write.csv(out_pp2, "PEE_interactions.csv", row.names=FALSE)
+write.csv(out_pp2, "data/PEE_interactions.csv", row.names=FALSE)
 
 ##generate bipartite network
 web7<- frame2webs(out_pp2[,c(1:2,4)], varnames = c("prey", "predator", "site_s"), type.out = "list", emptylist = TRUE)
